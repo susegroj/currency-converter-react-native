@@ -1,0 +1,38 @@
+{
+  "name": "CurrencyConverter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "react-native run-ios",
+    "and": "react-native run-android",
+    "link": "react-native link",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "6.2.0",
+    "color": "2.0.0",
+    "moment": "2.18.1",
+    "react": "16.3.0-alpha.3",
+    "react-native": "0.54.2",
+    "react-native-extended-stylesheet": "0.8.0",
+    "react-native-router-flux": "^4.0.0-beta.28",
+    "react-native-vector-icons": "^4.5.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "jest": "22.4.3",
+    "react-test-renderer": "16.3.0-alpha.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
