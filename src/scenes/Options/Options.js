@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView, StatusBar, Platform } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 import { ListItem, Separator } from '../../components/List';
 
@@ -7,7 +8,7 @@ import styles from './styles.js';
 
 class Options extends Component {
   handleThemePress = () => {
-    console.warn('Thems');
+    Actions.themes();
   }
 
   handleSitePress = () => {
