@@ -60,7 +60,7 @@ class Home extends Component {
   }
 
   handleHeader = () => {
-    console.warn('header');
+    Actions.options();
   }
 
   render() {

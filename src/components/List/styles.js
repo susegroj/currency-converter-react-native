@@ -1,5 +1,11 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
+const IconStyles = {
+  fontSize: 25,
+  alignSelf: 'center',
+  marginHorizontal: 15,
+};
+
 export default EStyleSheet.create({
   container: {
     flex: 1,
@@ -11,7 +17,6 @@ export default EStyleSheet.create({
     backgroundColor: '$lightGray',
     padding: 10,
     height: 50
-    // marginHorizontal: 10,
   },
   itemText: {
     color: '$darkText',
@@ -19,9 +24,12 @@ export default EStyleSheet.create({
     alignSelf: 'center'
   },
   checkIcon: {
+    ...IconStyles,
     color: 'green',
-    fontSize: 25,
-    alignSelf: 'center'
+  },
+  customIcon: {
+    ...IconStyles,
+    color: 'gray'
   },
   separator: {
     backgroundColor: '$borderColor',

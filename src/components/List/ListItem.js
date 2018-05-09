@@ -12,7 +12,7 @@ class ListItem extends Component {
   }
 
   render() {
-    const { name, selected, onPress } = this.props;
+    const { name, selected, onPress, customIcon } = this.props;
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={onPress} style={styles.itemButton}>
@@ -20,6 +20,10 @@ class ListItem extends Component {
           {
             selected === name &&
             <Icon name="ios-checkmark-circle" style={styles.checkIcon} />
+          }
+          {
+            customIcon !== '' &&
+            <Icon name={customIcon} style={styles.customIcon} />
           }
         </TouchableOpacity>
       </View>
@@ -29,8 +33,14 @@ class ListItem extends Component {
 
 ListItem.propTypes = {
   name: PropTypes.string.isRequired,
-  selected: PropTypes.string.isRequired,
+  selected: PropTypes.string,
   onPress: PropTypes.func.isRequired,
+  customIcon: PropTypes.string,
+};
+
+ListItem.defaultProps = {
+  selected: '',
+  customIcon: '',
 };
 
 export default ListItem;
