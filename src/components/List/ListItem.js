@@ -12,7 +12,7 @@ class ListItem extends Component {
   }
 
   render() {
-    const { name, selected, onPress, customIcon } = this.props;
+    const { name, selected, onPress, customIcon, iconColor } = this.props;
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={onPress} style={styles.itemButton}>
@@ -23,7 +23,7 @@ class ListItem extends Component {
           }
           {
             customIcon !== '' &&
-            <Icon name={customIcon} style={styles.customIcon} />
+            <Icon name={customIcon} style={[styles.customIcon, { color: iconColor }]} />
           }
         </TouchableOpacity>
       </View>
@@ -36,11 +36,13 @@ ListItem.propTypes = {
   selected: PropTypes.string,
   onPress: PropTypes.func.isRequired,
   customIcon: PropTypes.string,
+  iconColor: PropTypes.string,
 };
 
 ListItem.defaultProps = {
   selected: '',
   customIcon: '',
+  iconColor: 'gray'
 };
 
 export default ListItem;
